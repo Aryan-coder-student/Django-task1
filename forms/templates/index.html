@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Bano Django</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    {% block body %}
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url "login" %}">
+                <h5 class = "h5">Home</h5>
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row text-center" style = "margin-top:10rem;padding-left:8.75rem">
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://t4.ftcdn.net/jpg/00/65/77/27/240_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" class="card-img-top" style = "height:13.8rem" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Patient</h5>
+                        <a href={% url 'signupPatient' %} class="btn btn btn-outline-dark">Sign in Patient</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNSsZJIkDVDlj3pd-J_GYAUzzNs8bPnilloA" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Doctor</h5>
+                        <a href={% url 'signupDoc' %} class="btn btn btn-outline-dark">Sign in Doctor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
